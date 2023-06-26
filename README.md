@@ -6,7 +6,7 @@ ___
 
 Understand the process of creating docker containers using the [docker-image](https://github.com/design-group/ignition-docker).
 
-This project assumes you have a local Traefik reverse proxy running, if not, you can set one up using this repository [traefik-proxy](https://github.com/design-group/traefik-proxy)
+This project is compatible *with* and *without* Traefik. You can set up the Traefik Proxy using [this repository.](https://github.com/design-group/traefik-proxy)
 
 ___
 
@@ -31,19 +31,17 @@ ___
 5. If using a reverse proxy, go through the `docker-compose.traefik.yml` file and change all instances of `ignition-template` to your project name.
 6. Review the `.gitignore` file to add any
    additional directories and contents to ignore.
-7. To name the compose project that will be built, edit the `.env` file and set the `COMPOSE_PROJECT_NAME` variable to the name of 	your project.
+7. To name the compose project that will be built, edit the `.env` file and set the `COMPOSE_PROJECT_NAME` variable to the name of your project.
 
 	```sh
 	COMPOSE_PROJECT_NAME=<project-name>
 	```
 
-	or if you are using traefik as a reverse proxy, set the `.env` file to:
+	If you are **NOT** using the traefik proxy, you can delete or comment out the following lines:
 
 	```sh
 	COMPOSE_PATH_SEPARATOR=:
 	COMPOSE_FILE=docker-compose.yml:docker-compose.traefik.yml
-	COMPOSE_PROJECT_NAME=<project-name>
-	```
  
 8. If mounting the `workdir` volume on a non-MacOS device, make sure to create the directory first so that it is owned by the user running the container.
 
@@ -71,9 +69,9 @@ ___
 	- Broker (Distributor): `http://localhost:82`
 
 11. If using traefik as a proxy, access the different gateways at the following ports:
-	- Subscriber (Engine): `http://subscriber-template.localtest.me`
-	- Publisher (Transmission): `http://publisher-template.localtest.me`
-	- Broker (Distributor): `http://broker-template.localtest.me`
+	- Subscriber (Engine): `http://subscriber.localtest.me`
+	- Publisher (Transmission): `http://publisher.localtest.me`
+	- Broker (Distributor): `http://broker.localtest.me`
 
 ___
 
