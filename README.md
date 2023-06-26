@@ -1,4 +1,4 @@
-# IIOT Docker Project Template
+# IIOT Docker Project Template, Step-CA-Compatible
 
 ___
 
