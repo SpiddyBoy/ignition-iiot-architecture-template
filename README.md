@@ -37,7 +37,7 @@ ___
 	COMPOSE_PROJECT_NAME=<project-name>
 	```
 
-	If you are **NOT** using traefik, you can delete or comment out the following lines:
+	If you **ARE** using Traefik, uncomment the following lines:
 
 	```sh
 	COMPOSE_PATH_SEPARATOR=:
@@ -63,12 +63,12 @@ ___
     docker-compose pull && docker-compose up -d
     ```
 
-10. In a web browser, access the different gateways at the following ports:	
+10. In a web browser, you can access the different gateways at the following ports:	
 	- Subscriber (Engine): `http://localhost:9080`
 	- Broker (Distributor): `http://localhost:9081`
   	- Publisher (Transmission): `http://localhost:9082`
 
-11. If using traefik as a proxy, access the different gateways at the following ports:
+11. If using Traefik, you can access the different gateways at the following ports as well:
 	- Subscriber (Engine): `http://subscriber.localtest.me`
   	- Broker (Distributor): `http://broker.localtest.me`
 	- Publisher (Transmission): `http://publisher.localtest.me`
