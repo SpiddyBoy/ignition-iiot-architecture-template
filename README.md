@@ -63,14 +63,14 @@ ___
     ```
 
 9. In a web browser, you can access the different gateways at the following links:	
-	- Subscriber (Engine): `http://localhost:9080`
-	- Broker (Distributor): `http://localhost:9081`
-  	- Publisher (Transmission): `http://localhost:9082`
+	- Subscriber (Engine): [http://localhost:9080](http://localhost:9080)
+	- Broker (Distributor): [http://localhost:9081](http://localhost:9081)
+  	- Publisher (Transmission): [http://localhost:9082](http://localhost:9082)
 
 10. If you are using Traefik, you can use these ports as well:
-	- Subscriber (Engine): `http://subscriber.localtest.me`
-  	- Broker (Distributor): `http://broker.localtest.me`
-	- Publisher (Transmission): `http://publisher.localtest.me`
+	- Subscriber (Engine): [http://subscriber.localtest.me](http://subscriber.localtest.me)
+  	- Broker (Distributor): [http://broker.localtest.me](http://broker.localtest.me)
+	- Publisher (Transmission): [http://publisher.localtest.me](http://publisher.localtest.me)
 
 ___
 
