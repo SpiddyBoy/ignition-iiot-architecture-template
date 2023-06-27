@@ -64,14 +64,14 @@ ___
     ```
 
 10. In a web browser, access the different gateways at the following ports:	
-	- Subscriber (Engine): `http://localhost:80`
-	- Publisher (Transmission): `http://localhost:81`
-	- Broker (Distributor): `http://localhost:82`
+	- Subscriber (Engine): `http://localhost:9080`
+	- Broker (Distributor): `http://localhost:9081`
+  	- Publisher (Transmission): `http://localhost:9082`
 
 11. If using traefik as a proxy, access the different gateways at the following ports:
 	- Subscriber (Engine): `http://subscriber.localtest.me`
+  	- Broker (Distributor): `http://broker.localtest.me`
 	- Publisher (Transmission): `http://publisher.localtest.me`
-	- Broker (Distributor): `http://broker.localtest.me`
 
 ___
 
