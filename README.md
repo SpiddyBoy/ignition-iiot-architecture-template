@@ -28,10 +28,9 @@ ___
     ```
 
 4. Review the `docker-compose.yml` file to verify the container structure is correct
-5. If using a reverse proxy, go through the `docker-compose.traefik.yml` file and change all instances of `ignition-template` to your project name.
-6. Review the `.gitignore` file to add any
+5. Review the `.gitignore` file to add any
    additional directories and contents to ignore.
-7. To name the compose project that will be built, edit the `.env` file and set the `COMPOSE_PROJECT_NAME` variable to the name of your project.
+6. To name the compose project that will be built, edit the `.env` file and set the `COMPOSE_PROJECT_NAME` variable to the name of your project.
 
 	```sh
 	COMPOSE_PROJECT_NAME=<project-name>
@@ -43,13 +42,13 @@ ___
 	COMPOSE_PATH_SEPARATOR=:
 	COMPOSE_FILE=docker-compose.yml:docker-compose.traefik.yml
  
-8. If mounting the `workdir` volume on a non-MacOS device, make sure to create the directory first so that it is owned by the user running the container.
+7. If mounting the `workdir` volume on a non-MacOS device, make sure to create the directory first so that it is owned by the user running the container.
 
 	```sh
 	mkdir subscriber-data publisher-data
 	```
 
-9. Pull any changes to the docker image and start the container.
+8. Pull any changes to the docker image and start the container.
       
     On Mac:
     
@@ -63,12 +62,12 @@ ___
     docker-compose pull && docker-compose up -d
     ```
 
-10. In a web browser, you can access the different gateways at the following ports:	
+9. In a web browser, you can access the different gateways at the following ports:	
 	- Subscriber (Engine): `http://localhost:9080`
 	- Broker (Distributor): `http://localhost:9081`
   	- Publisher (Transmission): `http://localhost:9082`
 
-11. If using Traefik, you can access the different gateways at the following ports as well:
+10. If using Traefik, you can access the different gateways at the following ports as well:
 	- Subscriber (Engine): `http://subscriber.localtest.me`
   	- Broker (Distributor): `http://broker.localtest.me`
 	- Publisher (Transmission): `http://publisher.localtest.me`
