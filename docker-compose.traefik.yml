@@ -29,6 +29,7 @@ services:
     labels:
       traefik.enable: "true"
       traefik.hostname: broker
+      traefik.http.services.broker.loadbalancer.server.port: "8088"
     environment:
       GATEWAY_SYSTEM_NAME: broker
     networks:
