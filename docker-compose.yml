@@ -3,7 +3,7 @@ services:
     image: bwdesigngroup/ignition-docker-iiot
     hostname: subscriber
     ports:
-      - 8088
+      - 9080:8088
     volumes:
       - ./subscriber-data:/workdir
       - ./backups:/backups
@@ -21,7 +21,7 @@ services:
     image: bwdesigngroup/ignition-docker-iiot
     hostname: broker
     ports:
-      - 8088
+      - 9081:8088
       - 1883:1883
     volumes:
         - ./backups:/backups
@@ -39,7 +39,7 @@ services:
     image: bwdesigngroup/ignition-docker-iiot
     hostname: publisher
     ports:
-      - 8088
+      - 9082:8088
     volumes:
       - ./publisher-data:/workdir
       - ./backups:/backups
