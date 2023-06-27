@@ -36,11 +36,12 @@ ___
 	COMPOSE_PROJECT_NAME=<project-name>
 	```
 
-	If you **ARE** using Traefik, uncomment the following lines:
+	If you are using Traefik, uncomment the following lines in the `.env` file:
 
 	```sh
 	COMPOSE_PATH_SEPARATOR=:
 	COMPOSE_FILE=docker-compose.yml:docker-compose.traefik.yml
+ 	```
  
 7. If mounting the `workdir` volume on a non-MacOS device, make sure to create the directory first so that it is owned by the user running the container.
 
@@ -62,12 +63,12 @@ ___
     docker-compose pull && docker-compose up -d
     ```
 
-9. In a web browser, you can access the different gateways at the following links:	
+9. Whether or not you are using Traefik, you can access the gateways at the following ports:	
 	- Subscriber (Engine): [http://localhost:9080](http://localhost:9080)
 	- Broker (Distributor): [http://localhost:9081](http://localhost:9081)
   	- Publisher (Transmission): [http://localhost:9082](http://localhost:9082)
 
-10. If you are using Traefik, you can use these ports as well:
+10. If you are using Traefik, you can use these links instead:
 	- Subscriber (Engine): [http://subscriber.localtest.me](http://subscriber.localtest.me)
   	- Broker (Distributor): [http://broker.localtest.me](http://broker.localtest.me)
 	- Publisher (Transmission): [http://publisher.localtest.me](http://publisher.localtest.me)
