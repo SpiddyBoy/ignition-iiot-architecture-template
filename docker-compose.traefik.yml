@@ -7,6 +7,9 @@ services:
       traefik.hostname: subscriber
     environment:
       GATEWAY_SYSTEM_NAME: subscriber
+      GATEWAY_PUBLIC_HTTP_PORT: 80
+      GATEWAY_PUBLIC_HTTPS_PORT: 443
+      GATEWAY_PUBLIC_ADDRESS: subscriber.localtest.me
     networks:
       - default
       - proxy
@@ -19,6 +22,9 @@ services:
       traefik.hostname: publisher
     environment:
       GATEWAY_SYSTEM_NAME: publisher
+      GATEWAY_PUBLIC_HTTP_PORT: 80
+      GATEWAY_PUBLIC_HTTPS_PORT: 443
+      GATEWAY_PUBLIC_ADDRESS: publisher.localtest.me
     networks:
       - default
       - proxy
@@ -32,6 +38,9 @@ services:
       traefik.http.services.broker.loadbalancer.server.port: "8088"
     environment:
       GATEWAY_SYSTEM_NAME: broker
+      GATEWAY_PUBLIC_HTTP_PORT: 80
+      GATEWAY_PUBLIC_HTTPS_PORT: 443
+      GATEWAY_PUBLIC_ADDRESS: broker.localtest.me
     networks:
       - default
       - proxy
